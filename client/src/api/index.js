@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://food-delivery-app-mern-m2un.onrender.com",
+  baseURL: "https://food-delivery-app-mern-m2un.onrender.com/api",
 });
 
 //auth
