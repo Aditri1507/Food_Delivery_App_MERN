@@ -3,7 +3,6 @@ import styled from "styled-components";
 import TextInput from "../components/TextInput";
 import Button from "../components/Button";
 import { addToCart, deleteFromCart, getCart, placeOrder } from "../api";
-import { useNavigate } from "react-router-dom";
 import { CircularProgress } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { openSnackbar } from "../redux/reducers/SnackbarSlice";
@@ -109,10 +108,6 @@ const ProDesc = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
-const ProSize = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-`;
 
 const Right = styled.div`
   flex: 1;
@@ -138,7 +133,6 @@ const Delivery = styled.div`
 `;
 
 const Cart = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [reload, setReload] = useState(false);
